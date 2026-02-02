@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مدیریت دوره ها</title>
+  <link rel="icon" href="/public/images/icons8-cms-24.png">
+  <link rel="stylesheet" href="./../../public/css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- main content -->
+  <main>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <header>
+        <a href="./../../index.html">
+          <img src="./../../public/images/logo.png" class="website-logo" alt="" />
+        </a>
+      </header>
+      <main class="side-menu">
+        <ul class="side-container">
+          <li>
+            <a href="/index.html" class="navlink">
+              <span class="navicon"><i class="fa-solid fa-house"></i></span>
+              <span class="title">داشبورد</span>
+            </a>
+          </li>
+          <!-- Products -->
+          <li>
+            <a href="#" class="navlink active">
+              <span class="navicon"><i class="fa-solid fa-box"></i></span>
+              <span class="title">دوره ها</span>
+            </a>
+          </li>
+          <li>
+            <a href="./../users/" class="navlink">
+              <span class="navicon"><i class="fa-solid fa-users"></i></span>
+              <span class="title">کاربران</span>
+            </a>
+          </li>
+        </ul>
+      </main>
+      <footer></footer>
+      <button class="toggle-sidebar">
+        <!-- Arrow Right -->
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+    </aside>
+
+    <!-- Content -->
+    <section class="content">
+      <!-- breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="/" class="breadcrumb">صفحه اصلی</a>
+        <span class="backslack"> / </span>
+        <a href="/dashboard/products/">دوره ها</a>
+      </div>
+
+      <!-- Table -->
+      <div class="table-component">
+        <i class="ui-border emerald top"></i>
+        <!-- Table Header -->
+        <div class="section-header">
+          <div>
+            <p class="title-text">لیست دوره ها</p>
+            <p class="products-count-text caption-text">
+              <span class="products-data">0</span>
+              <span> محصول در وبسایت شما وجود دارد </span>
+            </p>
+          </div>
+          <a href="#" id="create-product" class="section-link">
+            <span>
+              <span> ایجاد دره </span>
+              <!-- Plus icon -->
+              <i class="fa-solid fa-plus"></i>
+            </span>
+          </a>
+        </div>
+        <!-- loader -->
+        <div id="loader" class="loader hidden">
+          <div class="spinner-3d">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <span class="loader-text">در حال بارگذاری...</span>
+        </div>
+
+
+
+        <!-- Table Head row -->
+        <div class="table-head-row">
+          <p>عنوان دوره</p>
+          <p>قیمت دوره</p>
+          <p>دسته بندی دوره</p>
+          <p>تعداد دانشجو</p>
+          <p>مدیریت</p>
+        </div>
+
+        <!-- Table body (content) -->
+        <div class="table-body">
+          <!-- Data Loaded From JS -->
+        </div>
+
+        <!-- Table Footer  -->
+        <div class="table-footer">
+          <!-- Pagination -->
+          <div class="pagination">
+            <span tabindex="1" class="page">1</span>
+            <span tabindex="1" class="page">2</span>
+            <span tabindex="1" class="page active">3</span>
+            <span tabindex="1" class="page">4</span>
+            <span tabindex="1" class="page">5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast failed hidden">
+    <i class="ui-border top-0"></i>
+    <span class="icon-card">
+      <span class="icon"></span>
+    </span>
+    <span class="toast-content"> محصول با موفقیت ویرایش شد </span>
+
+    <div class="process-bar">
+      <div class="process"></div>
+    </div>
+  </div>
+  <!-- remove product -->
+  <div class="modal-screen remove-modalScreen hidden">
+    <div class="modal">
+      <i class="ui-border top red"></i>
+      <i class="ui-border bottom red"></i>
+      <header class="modal-header">
+        <h3>حذف محصول</h3>
+        <button class="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+      <main class="modal-content">
+        <p class="remove-text">آیا از حذف این محصول اطمینان دارید؟</p>
+      </main>
+      <footer class="modal-footer">
+        <button class="cancel reject-DELETE">انصراف</button>
+        <button class="submit accept-DELETE">تائید</button>
+      </footer>
+    </div>
+  </div>
+  <!-- create new product -->
+  <div class="modal-screen create-course-modal hidden">
+    <div class="modal">
+      <header class="modal-header">
+        <h3>ایجاد محصول</h3>
+        <button class="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+      <main class="modal-content">
+        <input type="text" class="modal-input" placeholder="عنوان دوره جدید را وارد نمائید ..." id="product-title" />
+        <input type="number" class="modal-input" placeholder="قیمت دوره جدید را وارد نمائید ..." id="product-price" />
+        <input type="number" class="modal-input" placeholder="تعداد دانشجویان دوره حدید را وارد کنید"
+          id="product-shortName" />
+        <input type="text" class="modal-input new-product-category" placeholder="کتگوری دوره را وارد نمائید ..."
+          id="product-shortName" />
+      </main>
+      <footer class="modal-footer">
+        <button class="cancel reject-create-course">انصراف</button>
+        <button class="submit accept-create-course">تائید</button>
+      </footer>
+    </div>
+  </div>
+  <!-- edit product -->
+  <div class="modal-screen update-course-modal hidden">
+    <div class="modal">
+      <header class="modal-header">
+        <h3>ویرایش محصول</h3>
+        <button class="close-modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </header>
+      <main class="modal-content">
+        <input type="text" class="modal-input product-new-title" placeholder="عنوان جدید دوره را وارد نمائید ..."
+          id="product-title" />
+        <input type="number" class="modal-input product-new-price" placeholder="قیمت جدید دوره را وارد نمائید ..."
+          id="product-price" />
+        <input type="number" class="modal-input product-new-count" placeholder="تعداد جدید دانشجویان دوره را وارد کنید"
+          id="product-shortName" />
+        <input type="text" class="modal-input product-new-category" placeholder="کتگوری جدید دوره را وارد نمائید ..."
+          id="product-shortName" />
+      </main>
+      <footer class="modal-footer">
+        <button class="cancel reject-update-course">انصراف</button>
+        <button class="submit accept-update-course">ویزایش اطلاعات</button>
+      </footer>
+    </div>
+  </div>
+  <button class="theme-button">
+    <!-- Moon icon -->
+    <!-- <i class="fas fa-moon"></i> -->
+    <!-- Sun icon -->
+    <i class="fas fa-sun"></i>
+  </button>
+
+  <!-- Product Edit Modal -->
+  <!-- 
+            <header class="modal-header">
+            <h3>ویرایش محصول</h3>
+            <button class="close-modal">
+              <i class="fas fa-times"></i>
+            </button>
+          </header>
+          <main class="modal-content">
+            <input
+              type="text"
+              class="modal-input"
+              placeholder="عنوان محصول را وارد نمائید ..."
+              id="product-title"
+            />
+            <input
+              type="number"
+              class="modal-input"
+              placeholder="قیمت محصول را وارد نمائید ..."
+              id="product-price"
+            />
+            <input
+              type="number"
+              class="modal-input"
+              placeholder="عنوان کوتاه محصول را وارد نمائید ..."
+              id="product-shortName"
+            />
+          </main>
+          <footer class="modal-footer">
+            <button class="cancel">انصراف</button>
+            <button class="submit">تائید</button>
+          </footer>
+     -->
+
+  <!-- Product create modal -->
+  <!-- 
+          
+     -->
+
+
+  <script src="./../../public/js/app.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
