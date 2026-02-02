@@ -337,136 +337,136 @@ acceptCreateUserBtn.addEventListener("click", createUser);
 rejectUpdateUser.addEventListener("click", hideUserUpdateModal);
 acceptUpdateUser.addEventListener("click", updateUser);
 
-const users = [
-  {
-    firstname: "آرین",
-    lastname: "نیک‌فر",
-    username: "arian_nikfar",
-    email: "arian.nikfar@gmail.com",
-    age: 26,
-    city: "تهران",
-  },
-  {
-    firstname: "رها",
-    lastname: "دادگر",
-    username: "raha_dadgar",
-    email: "raha.dadgar@gmail.com",
-    age: 24,
-    city: "اصفهان",
-  },
-  {
-    firstname: "پارسا",
-    lastname: "بهرامی",
-    username: "parsa_bhrm",
-    email: "parsa.bahrami@gmail.com",
-    age: 28,
-    city: "شیراز",
-  },
-  {
-    firstname: "یاسمن",
-    lastname: "کوشا",
-    username: "yasmin_kousha",
-    email: "yasmin.kousha@gmail.com",
-    age: 22,
-    city: "رشت",
-  },
-  {
-    firstname: "کیان",
-    lastname: "فرهودی",
-    username: "kian_farhoodi",
-    email: "kian.farhoodi@gmail.com",
-    age: 30,
-    city: "مشهد",
-  },
-  {
-    firstname: "ملیکا",
-    lastname: "سپهری",
-    username: "melika_sepehri",
-    email: "melika.sepehri@gmail.com",
-    age: 25,
-    city: "کرج",
-  },
-  {
-    firstname: "سامیار",
-    lastname: "یزدانی",
-    username: "samiar_yzd",
-    email: "samiar.yazdani@gmail.com",
-    age: 27,
-    city: "یزد",
-  },
-  {
-    firstname: "النا",
-    lastname: "حق‌شناس",
-    username: "elena_haghshenas",
-    email: "elena.hagh@gmail.com",
-    age: 23,
-    city: "تبریز",
-  },
-  {
-    firstname: "دانیال",
-    lastname: "پوررضا",
-    username: "danial_pourreza",
-    email: "danial.pourreza@gmail.com",
-    age: 29,
-    city: "اهواز",
-  },
-  {
-    firstname: "هلیا",
-    lastname: "ماهدخت",
-    username: "helia_mahdokht",
-    email: "helia.mahdokht@gmail.com",
-    age: 21,
-    city: "ساری",
-  },
-  {
-    firstname: "ماهان",
-    lastname: "صدیقی",
-    username: "mahan_sedighi",
-    email: "mahan.sedighi@gmail.com",
-    age: 31,
-    city: "قم",
-  },
-  {
-    firstname: "نیلا",
-    lastname: "پژمان",
-    username: "nila_pejman",
-    email: "nila.pejman@gmail.com",
-    age: 24,
-    city: "قزوین",
-  },
-  {
-    firstname: "آدرین",
-    lastname: "رادمنش",
-    username: "adrin_radmanesh",
-    email: "adrin.radmanesh@gmail.com",
-    age: 27,
-    city: "تهران",
-  },
-];
+// const users = [
+//   {
+//     firstname: "آرین",
+//     lastname: "نیک‌فر",
+//     username: "arian_nikfar",
+//     email: "arian.nikfar@gmail.com",
+//     age: 26,
+//     city: "تهران",
+//   },
+//   {
+//     firstname: "رها",
+//     lastname: "دادگر",
+//     username: "raha_dadgar",
+//     email: "raha.dadgar@gmail.com",
+//     age: 24,
+//     city: "اصفهان",
+//   },
+//   {
+//     firstname: "پارسا",
+//     lastname: "بهرامی",
+//     username: "parsa_bhrm",
+//     email: "parsa.bahrami@gmail.com",
+//     age: 28,
+//     city: "شیراز",
+//   },
+//   {
+//     firstname: "یاسمن",
+//     lastname: "کوشا",
+//     username: "yasmin_kousha",
+//     email: "yasmin.kousha@gmail.com",
+//     age: 22,
+//     city: "رشت",
+//   },
+//   {
+//     firstname: "کیان",
+//     lastname: "فرهودی",
+//     username: "kian_farhoodi",
+//     email: "kian.farhoodi@gmail.com",
+//     age: 30,
+//     city: "مشهد",
+//   },
+//   {
+//     firstname: "ملیکا",
+//     lastname: "سپهری",
+//     username: "melika_sepehri",
+//     email: "melika.sepehri@gmail.com",
+//     age: 25,
+//     city: "کرج",
+//   },
+//   {
+//     firstname: "سامیار",
+//     lastname: "یزدانی",
+//     username: "samiar_yzd",
+//     email: "samiar.yazdani@gmail.com",
+//     age: 27,
+//     city: "یزد",
+//   },
+//   {
+//     firstname: "النا",
+//     lastname: "حق‌شناس",
+//     username: "elena_haghshenas",
+//     email: "elena.hagh@gmail.com",
+//     age: 23,
+//     city: "تبریز",
+//   },
+//   {
+//     firstname: "دانیال",
+//     lastname: "پوررضا",
+//     username: "danial_pourreza",
+//     email: "danial.pourreza@gmail.com",
+//     age: 29,
+//     city: "اهواز",
+//   },
+//   {
+//     firstname: "هلیا",
+//     lastname: "ماهدخت",
+//     username: "helia_mahdokht",
+//     email: "helia.mahdokht@gmail.com",
+//     age: 21,
+//     city: "ساری",
+//   },
+//   {
+//     firstname: "ماهان",
+//     lastname: "صدیقی",
+//     username: "mahan_sedighi",
+//     email: "mahan.sedighi@gmail.com",
+//     age: 31,
+//     city: "قم",
+//   },
+//   {
+//     firstname: "نیلا",
+//     lastname: "پژمان",
+//     username: "nila_pejman",
+//     email: "nila.pejman@gmail.com",
+//     age: 24,
+//     city: "قزوین",
+//   },
+//   {
+//     firstname: "آدرین",
+//     lastname: "رادمنش",
+//     username: "adrin_radmanesh",
+//     email: "adrin.radmanesh@gmail.com",
+//     age: 27,
+//     city: "تهران",
+//   },
+// ];
 
-const createUsersAtOnce = () => {
-  Promise.all(
-    users.map((user) =>
-      fetch("https://js-cms.iran.liara.run/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }),
-    ),
-  )
-    .then((responses) => {
-      if (responses.some((res) => !res.ok)) {
-        throw new Error();
-      }
-      fetchNewData();
-      showToast("success", "۱۳ کاربر با موفقیت ایجاد شدند 🎉");
-    })
-    .catch(() => {
-      showToast("failed", "خطا در ایجاد بعضی از کاربران");
-    });
-};
-console.log(1);
-createUsersAtOnce();
-createUsersAtOnce();
+// const createUsersAtOnce = () => {
+//   Promise.all(
+//     users.map((user) =>
+//       fetch("https://js-cms.iran.liara.run/api/users", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(user),
+//       }),
+//     ),
+//   )
+//     .then((responses) => {
+//       if (responses.some((res) => !res.ok)) {
+//         throw new Error();
+//       }
+//       fetchNewData();
+//       showToast("success", "۱۳ کاربر با موفقیت ایجاد شدند 🎉");
+//     })
+//     .catch(() => {
+//       showToast("failed", "خطا در ایجاد بعضی از کاربران");
+//     });
+// };
+// console.log(1);
+// createUsersAtOnce();
+// createUsersAtOnce();
