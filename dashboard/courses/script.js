@@ -320,158 +320,158 @@ acceptCreateCourse.addEventListener("click", createCourse);
 rejectUpdateCourse.addEventListener("click", hideUpdatCourseModal);
 acceptUpdateCourse.addEventListener("click", updateCourse);
 
-const courses = [
-  {
-    title: "آموزش جامع JavaScript",
-    price: 3200000,
-    registersCount: 120,
-    category: "frontend",
-    discount: 10,
-    desc: "دوره کامل جاوااسکریپت از صفر تا پیشرفته",
-  },
-  {
-    title: "React پیشرفته با پروژه واقعی",
-    price: 4500000,
-    registersCount: 85,
-    category: "frontend",
-    discount: 15,
-    desc: "ساخت پروژه‌های واقعی با React",
-  },
-  {
-    title: "HTML و CSS پروژه‌محور",
-    price: 1800000,
-    registersCount: 200,
-    category: "frontend",
-    discount: 5,
-    desc: "طراحی سایت مدرن و ریسپانسیو",
-  },
-  {
-    title: "TypeScript کاربردی",
-    price: 2600000,
-    registersCount: 90,
-    category: "frontend",
-    discount: 0,
-    desc: "تسلط بر TypeScript برای پروژه‌های واقعی",
-  },
-  {
-    title: "Node.js و Express عملی",
-    price: 3800000,
-    registersCount: 70,
-    category: "backend",
-    discount: 0,
-    desc: "پیاده‌سازی بک‌اند واقعی با Node.js",
-  },
-  {
-    title: "NestJS از صفر تا حرفه‌ای",
-    price: 4200000,
-    registersCount: 55,
-    category: "backend",
-    discount: 10,
-    desc: "فریم‌ورک NestJS برای بک‌اند مقیاس‌پذیر",
-  },
-  {
-    title: "REST API نویسی حرفه‌ای",
-    price: 3000000,
-    registersCount: 65,
-    category: "backend",
-    discount: 5,
-    desc: "طراحی API استاندارد و امن",
-  },
-  {
-    title: "MongoDB برای برنامه‌نویسان",
-    price: 2100000,
-    registersCount: 60,
-    category: "database",
-    discount: 5,
-    desc: "کار عملی با دیتابیس MongoDB",
-  },
-  {
-    title: "SQL و طراحی دیتابیس",
-    price: 2300000,
-    registersCount: 80,
-    category: "database",
-    discount: 0,
-    desc: "طراحی اصولی دیتابیس‌های رابطه‌ای",
-  },
-  {
-    title: "Git و GitHub حرفه‌ای",
-    price: 1500000,
-    registersCount: 150,
-    category: "tools",
-    discount: 0,
-    desc: "کنترل نسخه و کار تیمی با Git",
-  },
-  {
-    title: "Docker برای برنامه‌نویسان",
-    price: 3400000,
-    registersCount: 40,
-    category: "devops",
-    discount: 10,
-    desc: "کانتینرسازی پروژه‌ها با Docker",
-  },
-  {
-    title: "Linux مقدماتی تا پیشرفته",
-    price: 2800000,
-    registersCount: 75,
-    category: "devops",
-    discount: 0,
-    desc: "کار با لینوکس مخصوص دولوپرها",
-  },
-  {
-    title: "امنیت در وب",
-    price: 3600000,
-    registersCount: 50,
-    category: "security",
-    discount: 15,
-    desc: "مفاهیم امنیتی و جلوگیری از حملات رایج",
-  },
-  {
-    title: "الگوریتم و ساختمان داده",
-    price: 4000000,
-    registersCount: 95,
-    category: "computer-science",
-    discount: 0,
-    desc: "تقویت تفکر الگوریتمی برای مصاحبه",
-  },
-  {
-    title: "Next.js پروژه‌محور",
-    price: 3900000,
-    registersCount: 68,
-    category: "frontend",
-    discount: 10,
-    desc: "ساخت وب‌اپ‌های SSR با Next.js",
-  },
-  {
-    title: "Clean Code برای برنامه‌نویسان",
-    price: 2500000,
-    registersCount: 110,
-    category: "software",
-    discount: 5,
-    desc: "نوشتن کد تمیز و قابل نگهداری",
-  },
-];
+// const courses = [
+//   {
+//     title: "آموزش جامع JavaScript",
+//     price: 3200000,
+//     registersCount: 120,
+//     category: "frontend",
+//     discount: 10,
+//     desc: "دوره کامل جاوااسکریپت از صفر تا پیشرفته",
+//   },
+//   {
+//     title: "React پیشرفته با پروژه واقعی",
+//     price: 4500000,
+//     registersCount: 85,
+//     category: "frontend",
+//     discount: 15,
+//     desc: "ساخت پروژه‌های واقعی با React",
+//   },
+//   {
+//     title: "HTML و CSS پروژه‌محور",
+//     price: 1800000,
+//     registersCount: 200,
+//     category: "frontend",
+//     discount: 5,
+//     desc: "طراحی سایت مدرن و ریسپانسیو",
+//   },
+//   {
+//     title: "TypeScript کاربردی",
+//     price: 2600000,
+//     registersCount: 90,
+//     category: "frontend",
+//     discount: 0,
+//     desc: "تسلط بر TypeScript برای پروژه‌های واقعی",
+//   },
+//   {
+//     title: "Node.js و Express عملی",
+//     price: 3800000,
+//     registersCount: 70,
+//     category: "backend",
+//     discount: 0,
+//     desc: "پیاده‌سازی بک‌اند واقعی با Node.js",
+//   },
+//   {
+//     title: "NestJS از صفر تا حرفه‌ای",
+//     price: 4200000,
+//     registersCount: 55,
+//     category: "backend",
+//     discount: 10,
+//     desc: "فریم‌ورک NestJS برای بک‌اند مقیاس‌پذیر",
+//   },
+//   {
+//     title: "REST API نویسی حرفه‌ای",
+//     price: 3000000,
+//     registersCount: 65,
+//     category: "backend",
+//     discount: 5,
+//     desc: "طراحی API استاندارد و امن",
+//   },
+//   {
+//     title: "MongoDB برای برنامه‌نویسان",
+//     price: 2100000,
+//     registersCount: 60,
+//     category: "database",
+//     discount: 5,
+//     desc: "کار عملی با دیتابیس MongoDB",
+//   },
+//   {
+//     title: "SQL و طراحی دیتابیس",
+//     price: 2300000,
+//     registersCount: 80,
+//     category: "database",
+//     discount: 0,
+//     desc: "طراحی اصولی دیتابیس‌های رابطه‌ای",
+//   },
+//   {
+//     title: "Git و GitHub حرفه‌ای",
+//     price: 1500000,
+//     registersCount: 150,
+//     category: "tools",
+//     discount: 0,
+//     desc: "کنترل نسخه و کار تیمی با Git",
+//   },
+//   {
+//     title: "Docker برای برنامه‌نویسان",
+//     price: 3400000,
+//     registersCount: 40,
+//     category: "devops",
+//     discount: 10,
+//     desc: "کانتینرسازی پروژه‌ها با Docker",
+//   },
+//   {
+//     title: "Linux مقدماتی تا پیشرفته",
+//     price: 2800000,
+//     registersCount: 75,
+//     category: "devops",
+//     discount: 0,
+//     desc: "کار با لینوکس مخصوص دولوپرها",
+//   },
+//   {
+//     title: "امنیت در وب",
+//     price: 3600000,
+//     registersCount: 50,
+//     category: "security",
+//     discount: 15,
+//     desc: "مفاهیم امنیتی و جلوگیری از حملات رایج",
+//   },
+//   {
+//     title: "الگوریتم و ساختمان داده",
+//     price: 4000000,
+//     registersCount: 95,
+//     category: "computer-science",
+//     discount: 0,
+//     desc: "تقویت تفکر الگوریتمی برای مصاحبه",
+//   },
+//   {
+//     title: "Next.js پروژه‌محور",
+//     price: 3900000,
+//     registersCount: 68,
+//     category: "frontend",
+//     discount: 10,
+//     desc: "ساخت وب‌اپ‌های SSR با Next.js",
+//   },
+//   {
+//     title: "Clean Code برای برنامه‌نویسان",
+//     price: 2500000,
+//     registersCount: 110,
+//     category: "software",
+//     discount: 5,
+//     desc: "نوشتن کد تمیز و قابل نگهداری",
+//   },
+// ];
 
-const createCoursesAtOnce = () => {
-  Promise.all(
-    courses.map((course) =>
-      fetch("https://js-cms.iran.liara.run/api/courses", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(course),
-      }),
-    ),
-  )
-    .then((responses) => {
-      if (responses.some((res) => !res.ok)) {
-        throw new Error();
-      }
-      fetchNewData();
-      showToast("success", "۱۶ دوره با موفقیت ایجاد شدند 🎉");
-    })
-    .catch(() => {
-      showToast("failed", "خطا در ایجاد بعضی از دوره‌ها");
-    });
-};
-createCoursesAtOnce();
+// const createCoursesAtOnce = () => {
+//   Promise.all(
+//     courses.map((course) =>
+//       fetch("https://js-cms.iran.liara.run/api/courses", {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(course),
+//       }),
+//     ),
+//   )
+//     .then((responses) => {
+//       if (responses.some((res) => !res.ok)) {
+//         throw new Error();
+//       }
+//       fetchNewData();
+//       showToast("success", "۱۶ دوره با موفقیت ایجاد شدند 🎉");
+//     })
+//     .catch(() => {
+//       showToast("failed", "خطا در ایجاد بعضی از دوره‌ها");
+//     });
+// };
+// createCoursesAtOnce();
